@@ -3,6 +3,7 @@ package com.me.louguiyu
 import android.app.Application
 import com.me.louguiyu.di.networkModule
 import com.me.louguiyu.di.repoModule
+import com.me.louguiyu.di.storageModule
 import com.me.louguiyu.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -20,7 +21,7 @@ class FishApplication: Application() {
         startKoin {
             androidLogger()
             androidContext(this@FishApplication)
-            modules(listOf(networkModule, repoModule, viewModelModule))
+            modules(listOf(networkModule, repoModule, viewModelModule, storageModule))
         }
     }
 
