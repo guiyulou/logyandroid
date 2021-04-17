@@ -1,6 +1,10 @@
 package com.me.louguiyu
 
 import android.app.Application
+import com.me.louguiyu.di.networkModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 import timber.log.Timber
 
 class FishApplication: Application() {
@@ -9,6 +13,12 @@ class FishApplication: Application() {
         super.onCreate()
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
+        }
+
+        startKoin {
+            androidLogger()
+            androidContext(this@FishApplication)
+            modules(listOf(networkModule))
         }
     }
 
