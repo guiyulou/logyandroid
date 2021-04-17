@@ -30,12 +30,39 @@ android {
     }
 
     buildTypes {
+        debug {
+            minifyEnabled = false
+            shrinkResources false
+            debuggable true
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "env"
+
+    productFlavors {
+        dev {
+            dimension "env"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            buildConfigField 'String', 'API_BASE_URL', '"https://api.openweathermap.org/data/2.5/"'
+        }
     }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def appName = "My Fish App"
+            def productFlavor = variant.productFlavors[0].name
+            def buildType = variant.buildType.name
+            def date = new Date()
+            def formattedDate = date.format('yyyyMMdd')
+            def newName = "${appName}-${productFlavor}-${buildType}-${formattedDate}.apk"
+            outputFileName = new File(newName)
+        }
     }
 }
 
