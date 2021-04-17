@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Fish Application</string>
+    <string name="label_welcome">Welcome to fishy app :)</string>
 </resources>
