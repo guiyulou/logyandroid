@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--  light theme   -->
     <color name="vivid_sky_blue">#56CBF9</color>
     <color name="aero_blue">#7FBEEB</color>
     <color name="light_steel_blue">#AFBED1</color>
     <color name="queen_pink">#EAC5D8</color>
     <color name="lavender_web">#DBD8F0</color>
+
+    <!--  dark theme   -->
+    <color name="rich_black">#090909</color>
+    <color name="rifle_green">#4B5043</color>
+    <color name="opal_green">#9BC4BC</color>
+    <color name="aero_blue_dark">#D3FFE9</color>
+    <color name="sky_blue_crayola">#8DDBE0</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
