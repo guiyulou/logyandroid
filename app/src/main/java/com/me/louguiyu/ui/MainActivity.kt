@@ -1,7 +1,9 @@
-package com.me.louguiyu
+package com.me.louguiyu.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.me.louguiyu.R
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
