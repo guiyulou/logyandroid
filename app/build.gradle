@@ -56,4 +56,8 @@ dependencies {
     //RxKotlin
     implementation("io.reactivex.rxjava3:rxkotlin:3.0.1")
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    //Timbre logs
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
 }
